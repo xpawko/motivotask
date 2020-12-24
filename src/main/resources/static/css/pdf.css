@@ -1,0 +1,18 @@
+table, td, tr {
+
+    border: 2px solid black;
+    border-collapse: collapse;
+
+}
+
+table {
+    width: 50%;
+}
+
+.fail {
+    border: 2px solid red;
+    line-height: 20px;
+    width: 50%;
+
+}
+
