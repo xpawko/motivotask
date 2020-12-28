@@ -2,6 +2,8 @@ package pablo.motivo.model;
 
 
 import javax.persistence.*;
+import java.awt.*;
+//import java.awt.image.BufferedImage;
 import java.sql.Blob;
 import java.util.Date;
 
@@ -23,15 +25,19 @@ private String description;
 private Date loadDate;
 private String fileSize;
 @Lob
-private Blob content;
+private byte[] content;
 
-    public Pdf(String fileName, String description, Date loadDate, String fileSize, Blob content) {
+
+
+    public Pdf(String fileName, String description, Date loadDate, String fileSize, byte[] content) {
         this.fileName=fileName;
         this.description = description;
         this.loadDate = loadDate;
         this.fileSize = fileSize;
         this.content=content;
     }
+
+
 
 
     public Pdf(String fileName, String description, Date loadDate, String fileSize) {
@@ -83,11 +89,13 @@ private Blob content;
         this.fileName = fileName;
     }
 
-    public Blob getContent() {
+    public byte[] getContent() {
         return content;
     }
 
-    public void setContent(Blob content) {
+    public void setContent(byte[] content) {
         this.content = content;
     }
+
+
 }

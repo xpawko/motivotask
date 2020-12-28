@@ -20,6 +20,7 @@
         <td> data załowania</td>
         <td>rozmiar</td>
         <td>usun</td>
+        <td>zdjecie</td>
     </tr>
 
 
@@ -31,10 +32,12 @@
     <td th:text="${pdf.loadDate}"></td>
     <td th:text="${pdf.fileSize}"></td>
     <td><a th:href="@{'remove/'+${pdf.pdfId}}">X</a></td>
+    <td><img th:src="@{'/pdfs/image/'+${pdf.pdfId}}" width="149px" height="210px"/></td>
 
 </tr>
 
 </table>
+
 
 <br><br><br><br><br><br>
 
@@ -68,6 +71,7 @@
         </tr>
     </table>
 </form>
+
 
 
 </body>
